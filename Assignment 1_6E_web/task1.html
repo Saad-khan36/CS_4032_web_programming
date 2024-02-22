@@ -1,1 +1,108 @@
-Cdagd rga
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        margin: 0;
+         padding: 0;
+          display: flex;
+          justify-content: center;
+     align-items: center;
+         height: 100vh;
+        background-color: #99a644;
+        }
+        .calculator {
+            background-color: #c16e44; 
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(91, 4, 166, 0.1);
+            padding: 20px;
+             text-align: center;
+             width: 200px;
+        }
+        .input-field {
+            width: 100%;
+           margin-bottom: 10px;
+             padding: 5px;
+          font-size: 14px;
+             border: none;
+           border-radius: 5px;
+         
+          box-sizing: border-box;
+            text-align: right;
+        }
+        .output-field {
+            width: 100%;
+            
+         padding: 5px;
+         
+         font-size: 18px;
+            border: none;
+         
+            border-radius: 5px;
+            box-sizing: border-box;
+            
+            color: #64260b; 
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        .btn {
+            padding: 10px;
+            font-size: 14px;
+            border: none; 
+            
+            border-radius: 5px;
+            
+            cursor: pointer;
+            background-color: #8e3705; 
+            color: #170a0a; 
+           
+            transition: background-color 0.3s ease;
+            width: 40px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background-color: #1b121b; 
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <output class="output-field"></output>
+        <input type="text" class="input-field" placeholder="0" disabled>
+       
+        <div class="row">
+       <button class="btn">7</button>
+        <button class="btn">8</button>
+         <button class="btn">9</button>
+            <button class="btn">/</button>
+        </div>
+        <div class="row">
+            
+              <button class="btn">4</button>
+         <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">*</button>
+        </div>
+        <div class="row">
+         <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+            <button class="btn">-</button>
+        </div>
+        <div class="row">
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button class="btn">=</button>
+            <button class="btn">+</button>
+        </div>
+    </div>
+</body>
+</html>
