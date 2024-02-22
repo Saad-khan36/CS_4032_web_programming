@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(179, 107, 165);
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(175, 42, 155);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(155, 32, 135);
+        }
+
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="date" id="birthdate">
+        <input type="text" id="gender" placeholder="Gender">
+        <input type="tel" id="phone" placeholder="Phone Number">
+        <input type="text" id="zip" placeholder="Zip Code">
+        <input type="text" id="country" placeholder="Country">
+        <button type="submit">Register</button>
+        <div id="error" class="error"></div>
+    </form>
+
+    <script>
+        function validateForm() 
+        {
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var password = document.getElementById('password').value.trim();
+         var birthdate = document.getElementById('birthdate').value.trim();
+        var gender = document.getElementById('gender').value.trim();
+        var phone = document.getElementById('phone').value.trim();
+         var zip = document.getElementById('zip').value.trim();
+        var country = document.getElementById('country').value.trim();
+         var error = document.getElementById('error');
+        error.innerHTML = '';
+
+            if (!name || !email || !password || !birthdate || !gender || !phone || !zip || !country) {
+                error.innerHTML = 'Fill the complete form.';
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
