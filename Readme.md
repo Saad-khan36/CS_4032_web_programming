@@ -5,7 +5,7 @@ In simple calculator we inline CSS for styling input fields for numbers and an o
 <br>
 <br>Screen shot.<br>
 
-<img width="455" alt="Calculator" src="https://github.com/Saad-khan36/CS_4032_web_programming/assets/158451882/dff41490-eeae-47fe-832c-2aac7b4cc3f2">
+<img width="455" alt="Calculator" src="https://github.com/Saad-khan36/CS_4032_web_programming/assets/158451882/dff41490-eeae-47fe-832c-2aac7b4cc3f2"><br>
 Task no 2.<br>
 
 The second task is to make time table .In which we use style,pading,text-align.<br>
