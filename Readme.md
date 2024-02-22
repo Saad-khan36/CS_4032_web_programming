@@ -6,4 +6,4 @@ Task no 2.<br>
 The second task is to make time table .In which we use style,pading,text-align.<br>
 Task no3.<br>
 The task three is about the Cv in which we use css styling,font-family background-color, padding, margin, border-radius, box-shadow<br>
-https://C:\Users\5A_Traders\Documents\GitHub\CS_4032_
+![Uploading Calculator.PNG…]()
