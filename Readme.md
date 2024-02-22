@@ -12,6 +12,8 @@ The second task is to make time table .In which we use style,pading,text-align.<
 
 Task no3.<br>
 The task three is about the Cv in which we use css styling,font-family background-color, padding, margin, border-radius, box-shadow<br>
+<img width="649" alt="CV" src="https://github.com/Saad-khan36/CS_4032_web_programming/assets/158451882/00edcff1-69a0-4f28-a2dc-108ff8cf6442"><br>
+
 
 
 
