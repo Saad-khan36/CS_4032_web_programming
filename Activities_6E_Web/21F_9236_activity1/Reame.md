@@ -8,7 +8,3 @@ Task no 3<br>
 ![image](https://github.com/Saad-khan36/F21_9236_web_programming/assets/158451882/2795f3bb-f6d5-4d27-8241-1b3901da2350)<br>
 Task no 4<br>
 ![image](https://github.com/Saad-khan36/F21_9236_web_programming/assets/158451882/73c721bc-4077-4be2-b2fc-0dec410ea339)<br>
-=
-<br>![image](https://github.com/Saad-khan36/F21_9236_web_programming/assets/158451882/73c721bc-4077-4be2-b2fc-0dec410ea339)<br>
-
-      
