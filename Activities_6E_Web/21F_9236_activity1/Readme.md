@@ -1,10 +1,5 @@
 I am Saad .My Rollno is 21F_9236.I am Studing web.<br>
 This is my First activity.<br>
-<<<<<<< HEAD
-<Task no 1><br>
-
-Task no2 <br>
-=======
 Task no 1<br>
 ![image](https://github.com/Saad-khan36/F21_9236_web_programming/assets/158451882/eb4b89e1-0c3b-40e4-856d-4bfbf5ff8c25)<br>
 Task no 2<br>
@@ -12,15 +7,8 @@ Task no 2<br>
 Task no 3<br>
 ![image](https://github.com/Saad-khan36/F21_9236_web_programming/assets/158451882/2795f3bb-f6d5-4d27-8241-1b3901da2350)<br>
 Task no 4<br>
-<<<<<<< HEAD:Activities_6E_Web/21F_9236_activity1/Readme.md
+:Activities_6E_Web/21F_9236_activity1/Readme.md
 ![image](https://github.com/Saad-khan36/F21_9236_web_programming/assets/158451882/73c721bc-4077-4be2-b2fc-0dec410ea339)<br>
-=======
-<br>![image](https://github.com/Saad-khan36/F21_9236_web_programming/assets/158451882/73c721bc-4077-4be2-b2fc-0dec410ea339)<br>
-
-      
-
->>>>>>> ad4faa057ff48edb86acdd51c2c899aeebf7668a:Activities_6E_Web/Readme.md
 
 
->>>>>>> 64f94059cd4d97e110456d0b8239eb22bca104d7
 
