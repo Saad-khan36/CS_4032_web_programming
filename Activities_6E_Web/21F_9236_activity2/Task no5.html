@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table</title>
+</head>
+<body>
+  <label for="number">Enter a number:</label>
+  <input type="number" id="number">
+  <button onclick="printTable()">Result</button>
+
+  <h2>Table:</h2>
+  <div id="table"></div>
+
+  <script>
+    function printTable()
+     {
+      var number = parseInt(document.getElementById('number').value);
+      var tableHTML = '<table>';
+      for (var i = 1; i <= 10; i++) 
+      {
+        tableHTML =tableHTML + '<tr><td>' + number + ' x ' + i + '</td><td>=</td><td>' + (number * i) + '</td></tr>';
+      }
+     
+      document.getElementById('table').innerHTML = tableHTML;
+    }
+  </script>
+</body>
+</html>

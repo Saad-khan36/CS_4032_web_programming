@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Month Days</title>
+</head>
+<body>
+  <label for="month">Enter the name of the month (e.g., Jan, Feb):</label>
+  <input type="text" id="month" name="month">
+  <button onclick="getMonthDays()">Submit</button>
+
+  <h2 id="result"></h2>
+
+  <script>
+    function getMonthDays() {
+      var monthName = document.getElementById('month').value.toLowerCase();
+      var days;
+
+      switch (monthName) {
+        case 'jan':
+        case 'mar':
+        case 'may':
+        case 'jul':
+        case 'aug':
+        case 'oct':
+        case 'dec':
+          days = 31;
+          break;
+        case 'apr':
+        case 'jun':
+        case 'sep':
+        case 'nov':
+          days = 30;
+          break;
+        case 'feb':
+          days = '28 or 29';
+          break;
+        default:
+          days = 'Invalid month';
+      }
+
+      document.getElementById('result').innerHTML = 'Total days in <span style="color: red;">' + monthName.toUpperCase() + '</span>: ' + days;
+    }
+  </script>
+</body>
+</html>
