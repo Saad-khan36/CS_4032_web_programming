@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-git.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Find total width of an element (including width, padding and
+border) in jQuery.</title>
+</head>
+<body>
+<p class="text" id="text1">h1</p>
+<p class="text" id="text2">h2</p>
+<p class="text" id="text3">h3</p>
+<p class="text" id="text4"></p>
+<p class="text" id="text5"></p>
+<script>
+$("p").click(function()
+{
+var ids=$(this).attr('id');
+var classes=$(this).attr('class');
+$("#text4").text("this 'p' tag class name is : "+ classes);
+$("#text5").text("this 'p' tag id is : "+ ids);
+})
+</script>
+</body>
+</html>

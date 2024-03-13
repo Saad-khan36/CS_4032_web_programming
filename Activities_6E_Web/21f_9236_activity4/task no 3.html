@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body style="overflow:hidden;">
+<img style="height: 20rem;width: 50%;"
+src="https://images.unsplash.com/photo-1496034663057-6245f11be793?q=80&w=2070&aut
+o=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx
+8fA%3D%3D" alt="rain logo">
+<br>
+<button>Toggle</button>
+<script>
+$("button").click(function()
+{
+$("img").toggle();
+if ($("img").is(":visible"))
+{
+$("button").text("Toggle");
+}
+else{
+$("button").text("UnToggle");
+}
+});
+</script>
+</body>
+</html>
