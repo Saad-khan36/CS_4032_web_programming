@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Email Validation in JavaScript | CodingLab</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Email Validation</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
   <style>
     * {
       margin: 0;
@@ -11,134 +15,90 @@
       font-family: "Poppins", sans-serif;
     }
     body {
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(#4a7ec2, #566dde);
-      padding: 0 20px;
+      background: #4a9cd7;
     }
-    form {
-      max-width: 550px;
-      width: 100%;
-      padding: 30px;
-      border-radius: 4px;
-      border: none;
-    }
-    form .input-box {
-      display: flex;
-      height: 55px;
-      align-items: center;
+    .input-field
+     {
       position: relative;
+      height: 50px;
+      width: 280px;
+      border-radius: 6px;
+      background-color: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
-    .input-box input {
+    .input-field input 
+    {
       height: 100%;
+      width: 100%;
+      border: 2px solid #4671EA;
       outline: none;
-      border: 2px solid #bfbfbf;
-      border-radius: 4px;
-      font-size: 18px;
-      font-weight: 500;
-      padding: 0 10px;
-      transition: all 0.3s ease;
-      width: calc(75% - 20px);
-      margin-right: 10px;
-      padding-left: 30px;
+      border-radius: 6px;
+      padding: 0 15px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #333;
     }
-    form.valid .input-box input.input {
-      border-color: #4671EA;
+    input::placeholder 
+    {
+      color: #b4b4b4;
     }
-    .input-box input.input:focus {
-      border-color: #4671EA;
-    }
-    form.error input.input {
-      border-color: #de0611;
-    }
-    .input-box input.button {
-      width: 25%;
-      padding: 0;
-      color: #fff;
-      background: #4671EA;
-      border: none;
-      cursor: pointer;
-    }
-    .input-box input.button:hover {
-      background: #1748cf;
-    }
-    .input-box i.email-icon {
-      color: #bfbfbf;
+    .input-field .email-icon 
+    {
       position: absolute;
+      right: 15px;
       top: 50%;
-      left: 10px;
       transform: translateY(-50%);
-      font-size: 20px;
-      z-index: 1;
+      font-size: 22px;
+      color: #b4b4b4;
     }
-    form.valid i.email-icon {
-      color: #1748cf;
-    }
-    .input-box input.input:focus ~ i.email-icon {
-      color: #1748cf;
-    }
-    .input-box .error-icon,
-    .input-box .passed-icon {
+    .error-message {
       color: #de0611;
-      left: calc(75% - 60px);
-      display: none;
-    }
-    form.error .error-icon {
-      display: block;
-    }
-    .input-box .passed-icon {
-      color: #1748cf;
-    }
-    form.valid .passed-icon {
-      display: block;
-      color: #4caf50; /* Set color to green for valid state */
-    }
-    form .text {
-      color: #de0611;
-      font-size: 16px;
-      font-weight: 500;
-      margin: 10px 0 -10px 2px;
-    }
-    form.valid .text {
-      color: #1748cf;
+      font-size: 14px;
+      margin-top: 5px;
+      text-align: center;
     }
   </style>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
 <body>
-  <form action="#">
-    <div class="input-box">
-      <input class="input" type="text" placeholder="Enter your email">
-      <i class="fas fa-envelope email-icon"></i>
-      <i class="fas fa-exclamation-circle error-icon"></i>
-      <i class="fas fa-check-circle passed-icon"></i>
-    </div>
-    <p class="text"></p>
-  </form>
+  <div class="input-field">
+    <input type="email" placeholder="Enter your email" spellcheck="false"/>
+    <i class="uil uil-envelope email-icon"></i>
+  </div>
+  <span class="error-message"></span>
 
   <script>
-    const form = document.querySelector("form"),
-      eInput = form.querySelector(".input"),
-      text = form.querySelector(".text");
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+    const input = document.querySelector("input"),
+          emailIcon = document.querySelector(".email-icon"),
+          errorMessage = document.querySelector(".error-message");
+
+    input.addEventListener("keyup", () => {
       let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      form.classList.add("error");
-      form.classList.remove("valid");
-      if (eInput.value == "") {
-        text.innerText = "Email can't be blank";
-      } else if (!eInput.value.match(pattern)) {
-        text.innerText = "Please enter a valid email";
-      } else {
-        form.classList.replace("error", "valid");
-        text.innerText = "This is a valid email";
+
+      if (input.value === "") 
+      {
+        emailIcon.classList.replace("uil-check-circle", "uil-envelope");
+        emailIcon.style.color = "#b4b4b4";
+        errorMessage.textContent = ""; 
+        return;
       }
-    });
+      if (input.value.match(pattern)) 
+      {
+        emailIcon.classList.replace("uil-envelope", "uil-check-circle");
+        emailIcon.style.color = "#4bb543";
+        errorMessage.textContent = ""; 
+        return;
+      }
+      emailIcon.classList.replace("uil-check-circle", "uil-envelope");
+      emailIcon.style.color = "#de0611";
+      errorMessage.textContent = "Please enter a valid email";
+    })
   </script>
 </body>
 </html>
